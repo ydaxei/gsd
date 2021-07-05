@@ -229,15 +229,15 @@ fi
 myEcho "开始第 ${numI_next} 次操作"
 
 phoneN="./phone.txt"
-[[ ! -f ${phoneN} ]] && (echo 0 >${phoneN})
-left=17
-center=6
+[[ ! -f ${phoneN} ]] && (echo 9999 >${phoneN})
+left=13
+center=2
 start=$(cat "${phoneN}")
-if [[ "${start}" == "10000" ]]; then
-    myEcho "号码【${left}${center}（0000 ---> 9999）】处理完毕"
+if [[ "${start}" == "-1" ]]; then
+    myEcho "号码【${left}${center}（9999 ---> 0000）】处理完毕"
     exit 0
 fi
-((mob_next=${start}+1))
+((mob_next=${start}-1))
 echo -e >>${logFile}
 echo
 phone=${left}${center}$(add0 "${start}")
