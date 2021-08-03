@@ -1,7 +1,7 @@
 #!/bin/bash
 
 phoneNumLimit=10
-phoneStep=4
-phoneLeft=18
-phoneCenter=7
-phoneOrder="desc"
+phoneStep=6
+phoneLeft=14
+phoneCenter=8
+phoneOrder="asc"
